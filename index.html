@@ -9,6 +9,132 @@
     <title>Briamjopi Dominos</title>
 </head>
 <body>
-    
+    <br>
+    <br>
+    <ul class="nav justify-content-end bg-blue color-text-primary">
+        <li class="nav-item">
+            <a class="nav-link bg-primary text-white" href="#aboutUs">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link bg-primary text-white" href="#contac">CONTACT</a>
+        </li>
+    </ul>
+
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <div class="page-header">
+                <h1 class="display-1">Brimajopi Dominos</h1>
+            </div>
+
+            <div class="whatwedo">
+                <h1 class="pacifico">You should try out our flavours</h1>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <img class="one" align="middle" src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80" alt="Design" id="aboutUs">
+                        <br>
+                        <br>
+                        <h3 class="one">Pizza</h3>
+                        <br>
+                        <p class="one">Brimajopi gives you the best pizza in town..</p>
+                        <select class="form-control size">
+                            <option label="small" value="400">Small</option>
+                            <option label="medium" value="600">Medium</option>
+                            <option label="large" value="800">large</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <img class="two" align="middle" src="https://images.unsplash.com/photo-1550401728-539ebf40d9e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="Development">
+                        <br>
+                        <br>
+                        <h3 class="two">Toppings</h3>
+                        <br>
+                        <p class="two">For you to enjoy your pizza time,you should have some topppins to add the taste of your pizza.</p>
+                        <select class="form-control toppings">
+                            <option label="olives" value="150">Olives</option>
+                            <option label="cheese" value="200">Cheese</option>
+                            <option label="pepperoni" value="300">Pepperoni</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                            <img class='three' align="middle" src="https://images.unsplash.com/photo-1558701210-136ff9d4b3c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Product">
+                            <br>
+                            <br>
+                            <h3 class="three">Crust</h3>
+                            <br>
+                            <p class="three">Crust is your choice that you would wish to have..</p>
+                            <select class="form-control crust">
+                                <option label="stuffed" value="500">Stuffed</option>
+                                <option label="gluten-free" value="300">Gluten free</option>
+                                <option label="crispy" value="200">Crispy</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="text-center">
+                <button class="btn btn-primary order" type="submit">Order</button>
+            </div>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Order.No</th>
+                        <th scope="col">Pizza size</th>
+                        <th scope="col">Toppings</th>
+                        <th scope="col">Crust</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="pizza">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td id="size"></td>
+                        <td id="toppings"></td>
+                        <td id="crust"></td>
+                        <td id="total"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="additional-buttons">
+                <div class="text-center">
+                    <button class="btn btn-primary add-pizza" type="submit">Add another</button>
+                    <div class="additional-info">
+                        <h3>The total is: <span></span></h3>
+                        <h5>Would you like delivery for an additional 200 ??</h5>
+                        <h4>Your order has been recieved successfully <span></span></h4>
+                        <div class="location text-center">
+                            <input type="text" size="30" placceholder="where you live" required/>
+                            <button class="btn btn-primary complete" type="submit">Complete</button>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <button class="btn btn-primary yes" type="submit">Yes</button>
+                    <button class="btn btn-primary no" type="submit">No</button>
+                </div>
+                <div class="text-right">
+                    <button class="btn btn-primary check-out" type="submit">Checkout</button>
+                </div>
+            </div>
+            <div class="text-center">
+                <address id="contact">
+                    <strong>Brimajopi Dominos</strong><br>
+                    Linturi close,Valley acade<br>
+                    Nairobi 001-100<br>
+                </address>
+                <address>
+                    <strong>Email:</strong><br>
+                    <a href="wasongapaul5@gmail.com">wasongapaul5@gmail.com</a>
+                </address>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
