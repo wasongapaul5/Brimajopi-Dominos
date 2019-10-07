@@ -28,13 +28,14 @@ ul li a:hover{
     color:white;
 }
 nav{
-    /* background-color: #00000069; */
+    background-color:#0000006b;
     text-decoration: none;
 }
 
 
 .active{
     background-color: #4CAF50;
+    height:80px
 }
 ul{
     padding:0;
@@ -52,29 +53,39 @@ ul{
 }
 
 .sec-1{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp8ljeght9NDBI6FaYDGTo6nLdMAcZ_75A8bnGBuInfijsp-icig~");
+    height:99vh;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp8ljeght9NDBI6FaYDGTo6nLdMAcZ_75A8bnGBuInfijsp-icig");
     background-size: cover;
     background-repeat: no-repeat;
     height:99vh;
 }
-
+.overlay{
+    background-color: #10050061;
+    height:99vh;
+}
 
 .header{
     padding:200px;
 }
 
 h1{
-    font-size: 150px;
-    font-family: Verdana;
-    border-bottom: 1px solid white;
+    font-size: 170px;
+    color:white;
+    font-family: 'Lobster Two', cursive;
+    border-bottom: 2px solid white;
     border-top: 1px solid white;
 }
 
 .header p{
     font-size: 30px;
-    font-family: Verdana;
+    font-family: 'Mansalva', cursive;
+    font-weight: bolder;
+    
 }
 
+p{
+   
+}
 .row{
     padding:100px;
     width:70%;
