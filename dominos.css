@@ -10,7 +10,8 @@ body{
 
 .more img{
     border-radius: 10%;
-    width:100px;
+    width:200px;
+    height:200px;
     justify-content: space-between;
     display: flex;
 }
@@ -60,7 +61,7 @@ h1{
 
 .row{
     padding:100px;
-    box-shadow: 0 20px 10px 10px;
+    box-shadow: 0 10px 20px 10px;
 }
 
 h6{
@@ -72,4 +73,8 @@ h6{
 
 .three img{
     align-items:center;
+}
+
+#contact{
+    padding:30px;
 }
