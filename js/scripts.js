@@ -1,71 +1,120 @@
 $(document).ready(function(){
+    $(".more p").hide();
     
-    $(".more p.one").click(function(){
-        $(".more img.one").toggle(1200);
-        $(".more p.one").toggle(1000);
-    });
-
     $(".more img.one").click(function(){
-        $(".more img.one").toggle(1200);
-        $(".more p.one").toggle(1000);
+        $(".more img.one").toggle();
+        $(".more p.one").toggle();
     });
 
-    $(".more p.two").click(function(){
-        $(".more img.two").toggle(1200);
-        $(".more p.two").toggle(1000);
+    $(".more p.one").click(function(){
+        $(".more img.one").toggle();
+        $(".more p.one").toggle();
     });
 
     $(".more img.two").click(function(){
-        $(".more img.two").toggle(1200);
-        $(".more p.two").toggle(1000);
+        $(".more img.two").toggle();
+        $(".more p.two").toggle();
     });
 
-    $(".more p.three").click(function(){
-        $(".more img.three").toggle(1200);
-        $(".more p.three").toggle(1000);
+    $(".more p.two").click(function(){
+        $(".more img.two").toggle();
+        $(".more p.two").toggle();
     });
 
     $(".more img.three").click(function(){
-        $(".more img.three").toggle(1200);
-        $(".more p.three").toggle(1000);
+        $(".more img.three").toggle();
+        $(".more p.three").toggle();
+    });
+
+    $(".more p.three").click(function(){
+        $(".more img.three").toggle();
+        $(".more p.three").toggle();
     });
 
     $(".more h3").click(function(){
-        $(".more img.one").toggle(1200);
-        $(". morep.one").toggle(1000);
+        $(".more img.one").toggle();
+        $(".more p.one").toggle();
     });
 
-
-    $(".table").hide();
+    $("table").hide();
     $(".additional-buttons").hide();
     $(".additional-info").hide();
     $(".btn.yes").hide();
-    $(".btn-no").hide();
+    $(".btn.no").hide();
     $(".additional-info h4").hide();
 
     $(".btn.order").click(function(){
-        var sizeOfpizza = $(".size option:selected").val();
-        var toppingsOfpizza = $(".toppings option:selected").val();
-        var crustOfpizza = $(".crust option:selected").val();
-        var total = parseInt(sizeOfpizza) + parseInt(toppingsOfpizza) + parseInt(crustOfpizza);
-        var order=1;
+        var sizeOfPizza = $(".size option:selected").val();
+        var toppingsOfPizza = $(".toppings option:selected").val();
+        var crustOfPizza = $(".crust option:selected").val();
+        var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+        var order = 1;
         var grandTotal = 0;
+
+        $(".table").show();
+        $(".additional-buttons").show();
+        $(".btn.order").hide();
+
+        $("#size").html($(".size option:selected").text() + "-" + sizeOfPizza);
+        $("#toppings").html($(".toppings option:selected").text() + "-" + toppingsOfPizza);
+        $("#crust").html($(".crust option:selected").text() + "-" + crustOfPizza);
+        $("#total").html(total);
+
+        function Pizza(size,toppings,crust,total,orderNo){
+            this.size = size;
+            this.toppings = toppings;
+            this.crust = crust;
+            this.total = total;
+            this.orderNo = orderNo;
+        }
+
+        $(".btn.add-pizza").click(function(){
+            var sizeOfPizza = $(".size option:selected").val();
+            var toppingsOfPizza = $(".toppings option:selected").val();
+            var crustOfPizza = $(".crust option:selected").val();
+            var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+            order = order + 1;
+            grandTotal = grandTotal + total;
+            var newPizza = new Pizza(sizeOfPizza,toppingsOfPizza,crustOfPizza,total,order);
+            var newRow = '<tr><th> scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + "-" + newPizza.size + '</td><td id="toppings">' + $(".toppings option:selected").text() + "-" + newPizza.toppings + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
+            $("#pizza").append(newRow);
+        });
+
+        $(".btn.check-out").click(function(){
+            $(".btn.add-pizza").hide();
+            $(".btn.check-out").hide();
+            $(".btn.additional-info").show();
+            $(".btn.yes").show();
+            $(".btn.no").show();
+            $(".additional-info .location").hide();
+            grandTotal = grandTotal + total;
+            $(".additional-info h3 span").html(grandTotal);
+        });
+
+        $(".btn.yes").click(function(){
+            $(".additional-info h5").hide();
+            $(".btn.yes").hide();
+            $(".btn.no").hide();
+            $(".additional-info .location").show();
+            $(".additional-info h3 span").html(grandTotal + 200);
+        });
+
+        $(".btn.no").click(function(){
+            $(".additional-info h5").hide();
+            $(".btn.yes").hide();
+            $(".btn.no").hide();
+            $(".additional-info .location").show();
+        });
+
+        $(".btn.complete").click(function(){
+            var location = $(".additional-info .location input").val();
+            $(".additional-info h4").show();
+            $(".additional-info .location").hide();
+            $(".additional-info h4 span").html(location);
+        });
     });
 
-    $("table").show();
-    $(".additional-buttons").show();
-    $(".btn.order").hide();
 
-    $(".btn.add-pizza").click(function(){
-        var sizeofpizza = $(".size option:selected").val();
-        var toppingsOfpizza = $(".toppings option:selected").val();
-        var crustOfpizza = $(".crustOf option.selected").val();
-        var total = parseInt(sizeOfpizza) + parseInt(toppingsOfpizza) + parseInt(crustOfpizza);
-        order = order +1;
-        grandTotal = grandTotal + total;
-    })
-})
-
-
-
+});
+  
 
