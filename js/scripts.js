@@ -32,8 +32,8 @@ $(document).ready(function(){
     });
 
     $(".more h3").click(function(){
-        $(".more img.one").toggle(1200);
-        $(".more p.one").toggle(1000);
+        $(".more img.one").toggle(12000);
+        $(".more p.one").toggle();
     });
 
     $("table").hide();
