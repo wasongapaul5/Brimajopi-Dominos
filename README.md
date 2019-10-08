@@ -1,7 +1,7 @@
 # Brimajopi-Dominos
 
 ##- Description 
-- This is a web application that allows te user to order pizza online and thus delivery is done on the allocated location'
+- This is a web application that allows the user to order pizza online and thus delivery is done on the allocated location'
 
 ##- Author 
 - Wasonga Paul Oketch
