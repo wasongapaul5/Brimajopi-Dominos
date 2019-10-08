@@ -2,38 +2,38 @@ $(document).ready(function(){
     $(".more p").hide();
     
     $(".more img.one").click(function(){
-        $(".more img.one").toggle();
-        $(".more p.one").toggle();
+        $(".more img.one").toggle(1200);
+        $(".more p.one").toggle(1000);
     });
 
     $(".more p.one").click(function(){
-        $(".more img.one").toggle();
-        $(".more p.one").toggle();
+        $(".more img.one").toggle(1200);
+        $(".more p.one").toggle(1000);
     });
 
     $(".more img.two").click(function(){
-        $(".more img.two").toggle();
-        $(".more p.two").toggle();
+        $(".more img.two").toggle(1200);
+        $(".more p.two").toggle(1000);
     });
 
     $(".more p.two").click(function(){
-        $(".more img.two").toggle();
-        $(".more p.two").toggle();
+        $(".more img.two").toggle(1200);
+        $(".more p.two").toggle(1000);
     });
 
     $(".more img.three").click(function(){
-        $(".more img.three").toggle();
-        $(".more p.three").toggle();
+        $(".more img.three").toggle(1200);
+        $(".more p.three").toggle(1000);
     });
 
     $(".more p.three").click(function(){
-        $(".more img.three").toggle();
-        $(".more p.three").toggle();
+        $(".more img.three").toggle(1200);
+        $(".more p.three").toggle(1000);
     });
 
     $(".more h3").click(function(){
-        $(".more img.one").toggle();
-        $(".more p.one").toggle();
+        $(".more img.one").toggle(1200);
+        $(".more p.one").toggle(1000);
     });
 
     $("table").hide();
@@ -59,6 +59,8 @@ $(document).ready(function(){
         $("#toppings").html($(".toppings option:selected").text() + "-" + toppingsOfPizza);
         $("#crust").html($(".crust option:selected").text() + "-" + crustOfPizza);
         $("#total").html(total);
+
+
 
         function Pizza(size,toppings,crust,total,orderNo){
             this.size = size;
