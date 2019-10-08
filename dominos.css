@@ -8,42 +8,7 @@ body{
     width:960px;
 }
 
-li{
-float: left;
-  padding:50px;
-  font-weight: bolder;
-  font-size: 30px;
-  text-decoration: none;
-}
 
-li a{
-    color:#000;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    padding:14px 16px;
-
-}
-ul li a:hover{
-    color:white;
-}
-nav{
-    background-color:#0000006b;
-    text-decoration: none;
-}
-
-
-.active{
-    background-color: #4CAF50;
-    height:80px
-}
-ul{
-    padding:0;
-    overflow: hidden;
-    margin:0;
-    background-attachment: #f1f1f1;
-    list-style-type:none;
-}
 .more img{
     border-radius: 10%;
     width:200px;
@@ -65,15 +30,17 @@ ul{
 }
 
 .header{
-    padding:200px;
+    padding:300px;
 }
 
 h1{
-    font-size: 170px;
+    font-size: 100px;
     color:white;
     font-family: 'Lobster Two', cursive;
     border-bottom: 2px solid white;
     border-top: 1px solid white;
+    padding:0;
+    font-family: 'Vidaloka', serif;
 }
 
 .header p{
@@ -83,16 +50,7 @@ h1{
     
 }
 
-p{
-   
-}
-.row{
-    padding:100px;
-    width:70%;
-    box-shadow: 0 10px 20px 10px;
-    padding-left: 70px;
 
-}
 
 h6{
     text-align: center;
